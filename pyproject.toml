@@ -1,0 +1,24 @@
+[project]
+name = "langgraphtutorial"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "parkcheorhyeon",email = "r4560798@naver.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12.4,<4.0"
+dependencies = [
+    "langgraph (>=0.3.33,<0.4.0)",
+    "langsmith (>=0.3.33,<0.4.0)",
+    "openai (>=1.76.0,<2.0.0)",
+    "langchain-openai (>=0.3.14,<0.4.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "langchain-core (>=0.3.55,<0.4.0)",
+    "grandalf (>=0.8,<0.9)",
+    "langchain-tavily (>=0.1.5,<0.2.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
