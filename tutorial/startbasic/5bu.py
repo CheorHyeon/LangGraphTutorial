@@ -129,6 +129,10 @@ events = graph.stream(
 for evt in events:
     evt["messages"][-1].pretty_print()
 
+snapshot = graph.get_state(config)
+print(">>> SNAPSHOT :", snapshot)
+print(">>> NEXT NODES:", snapshot.next)
+
 # 사용자 응답을 재개하는 Command
 human_command = Command(resume={
     "name": "LangGraph",
