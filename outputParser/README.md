@@ -61,3 +61,39 @@ parser_fb = RegexParser(regex=your_regex, output_keys=["a","b"], default_output_
 print(parser_fb.parse("not match"))    # {'fallback': 'not match'}
 
 ```
+
+---
+
+## 파서별 특징 요약
+
+- LangChain의 기본 제공 OutputParser들은 2가지 파서로 나뉨
+  - 프롬프트에 자동으로 "이런 형식으로 응답해달라" 라는 지침을 생성하는 파서
+    - JSON, XML, CSV, StructuredOutputParser처럼 복잡한 스키마 다룰때 유용
+    - `get_format_instructions()` 메서드를 통해 자동으로 포맷 지침 생성
+  - 단순 후처리용 파서
+    - RegexParser, CommaSeparatedListOutputParser, ListOutputParser 등
+    - LLM의 응답을 단순히 파싱만 하기에 별도 자동 지침 생성 기능 없음
+      - 프롬프트에 직접 "쉼표로 구분해 주세요" 같은 명시적 지시 넣어야 함
+
+### `get_format_instructions()` 지원 유무와 기능을 한눈에 정리한 표
+
+
+| 파서 이름                             | `get_format_instructions()` 지원 여부 | 주요 기능                                           |
+|--------------------------------------|--------------------------------------|----------------------------------------------------|
+| **StrOutputParser**                  | 아니요                               | 메시지나 문자열에서 최상위 텍스트를 추출 (`str`) |
+| **JsonOutputParser**                 | 예                                   | LLM 응답을 JSON 객체로 파싱 (Pydantic 모델 지원)   |
+| **SimpleJsonOutputParser**           | 예                                   | `JsonOutputParser`의 별칭, 동일하게 JSON 파싱      |
+| **CommaSeparatedListOutputParser**   | 아니요                               | 쉼표로 구분된 문자열을 `List[str]`로 변환           |
+| **ListOutputParser**                 | 아니요                               | LLM 응답을 줄 단위 리스트로 파싱 (`List[str]`)     |
+| **MarkdownListOutputParser**         | 아니요                               | 마크다운 리스트(`- item` 등)를 `List[str]`로 파싱  |
+| **NumberedListOutputParser**         | 아니요                               | 번호 매겨진 리스트(`1. item`)를 `List[str]`로 파싱 |
+| **RegexParser**                      | 아니요                               | 정규표현식으로 텍스트에서 그룹별 값을 뽑아 `dict` 반환 |
+| **XMLOutputParser**                  | 예                                   | XML 형태 응답을 `dict`로 파싱                     |
+| **CsvOutputParser**                  | 예                                   | 쉼표 구분 CSV 문자열을 `List[str]`로 파싱          |
+| **PydanticOutputParser**             | 아니요*                              | Pydantic 모델에 맞춰 JSON 응답을 검증·파싱 (invoke() 사용) |
+| **YamlOutputParser**                 | 아니요                               | YAML 블록을 Pydantic 모델로 파싱                   |
+| **EnumOutputParser**                 | 아니요                               | 지정한 `Enum` 값 중 하나로 매핑                    |
+| **DatetimeOutputParser**             | 예                                   | 날짜/시간 문자열을 `datetime` 객체로 파싱         |
+| **StructuredOutputParser**           | 예                                   | `ResponseSchema` 기반으로 문자열을 `Dict[str,Any]`로 파싱 |
+| **OutputFixingParser**               | 아니요                               | 다른 파서를 래핑하여, 에러 시 LLM을 호출해 출력 수정 |
+| **RetryWithErrorParser**             | 아니요                               | 파싱 실패 시 LLM에 원본과 에러를 보내 재시도하도록 요청 |
