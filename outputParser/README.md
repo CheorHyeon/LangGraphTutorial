@@ -24,8 +24,8 @@
 |:--------------------------------------|:--------------------------------------------------------|:-------------------------------------------------------------|
 | **PydanticOutputParser**              | Pydantic 모델 기반 JSON 지침 생성 & 인스턴스 반환       | [PydanticOutputParser](https://github.com/CheorHyeon/LangGraphTutorial/pull/9)   |
 | **CommaSeparatedListOutputParser**    | 쉼표로 구분된 문자열 → `List[str]` 변환                  | [CommaSeparatedListOutputParser](https://github.com/CheorHyeon/LangGraphTutorial/pull/11) |
-| **RegexParser**                       | 정규식 캡처 그룹 → `dict` 반환                           | 하단 설명에 링크 포 |
-                 
+| **RegexParser**                       | 정규식 캡처 그룹 → `dict` 반환                           | 하단 설명에 링크 포함 |
+
 ### 4.1. RegexParser 
 - main 브랜치에 바로 커밋하여 아래 설명 작성
   - [feat : RegexParser_v1 완성](https://github.com/CheorHyeon/LangGraphTutorial/commit/c9f7042b254b41abf3270e966ab3d1f1be70f50e)
