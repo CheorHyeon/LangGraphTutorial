@@ -24,7 +24,7 @@
   - [PydanticOutputParser](https://github.com/CheorHyeon/LangGraphTutorial/pull/9)
 - CommonSeparatedListOutputParser
   - 쉼표로 구분된 항목 목록 반환 필요가 있을때 유용
-  - [Common separeted list output parser](https://github.com/CheorHyeon/LangGraphTutorial/pull/11)
+  - [CommaSeparatedListOutputParser](https://github.com/CheorHyeon/LangGraphTutorial/pull/11)
 - RegexParser
   - 모르고 main 브랜치에 바로 커밋하여 아래 설명 작성.. 
     - [feat : RegexParser_v1 완성](https://github.com/CheorHyeon/LangGraphTutorial/commit/c9f7042b254b41abf3270e966ab3d1f1be70f50e)
