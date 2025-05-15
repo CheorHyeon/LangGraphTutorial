@@ -23,7 +23,7 @@
 
 ## 📚 사전 지식 (Prerequisite)
 
-### 1. Python 기초 문법
+### Python 기초 문법
 
 - 리스트, bool, dictionary 등 기본 자료구조 예제
   - [출처 - 점프투파이썬 위키 독스](https://wikidocs.net/book/1)
@@ -42,3 +42,7 @@
 ## 💬 stream 방식 예시
 - 에이전트 그래프 노드별 실시간 업데이트 예제
 - [PR - Stream 방식 정리](https://github.com/CheorHyeon/LangGraphTutorial/pull/2)
+
+## 💻 Prompt 학습
+- LangChain의 Prompt 관련 기능 사용법 및 예제 정리
+- [Prompt 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/prompt)
