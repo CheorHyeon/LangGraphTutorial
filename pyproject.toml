@@ -17,6 +17,8 @@ dependencies = [
     "grandalf (>=0.8,<0.9)",
     "langchain-tavily (>=0.1.5,<0.2.0)",
     "pydantic (>=2.11.4,<3.0.0)",
+    "langchain-chroma (>=0.2.4,<0.3.0)",
+    "langchain-community (>=0.3.24,<0.4.0)",
 ]
 
 
