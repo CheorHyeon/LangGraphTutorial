@@ -37,8 +37,10 @@ Context: {이곳에 검색된 정보가 삽입됩니다}
 ```
 
 
-## 4. 구현한 프롬프트 관련 예제 
+## 4. 구현 요약
 
 | 예제 구성                              | 주요 내용                                                                               | PR 링크                                                       |
 |:-----------------------------------|:------------------------------------------------------------------------------------|:------------------------------------------------------------|
 | **프롬프트(Prompt)**                   | PromptTemplate 생성, ChatPromptTemplate의 `format_messages()` 및 `MessagesPlaceholder` 사용 등 | [feat : 프롬프트 챕터 완성](https://github.com/CheorHyeon/LangGraphTutorial/pull/13) |
+| **퓨샷프롬프트(FewShotPromptTemplate)**|Few-Shot Prompting 개념 및 예제, Example Selector 예제 등 | [feat : Few Shot Prompt 챕터 완성](https://github.com/CheorHyeon/LangGraphTutorial/pull/15)|
+|**LangChain Hub**|LangChain 허브 pull, push 예제 등 | [feat : LangChain Hub 예시 코드 완성](https://github.com/CheorHyeon/LangGraphTutorial/pull/16) <br> [feat : LangChain Hub 예시 코드2 완성](https://github.com/CheorHyeon/LangGraphTutorial/pull/17)|
