@@ -49,6 +49,7 @@
 
 - 캐싱 : API 호출 횟수를 줄여 비용 절감과 속도 향상
 
-| 목차                                 | 주요 내용                                           | 링크                                                                   |
-|:-----------------------------------|:------------------------------------------------|:---------------------------------------------------------------------|
-| **캐싱(Cache)**                      | InMemoryCache, SQLiteCache로 API 호출 최적화 | [캐시(Cache)](https://github.com/CheorHyeon/LangGraphTutorial/pull/18) |
+| 목차                                    | 주요 내용                                           | 링크                                                                   |
+|:--------------------------------------|:------------------------------------------------|:---------------------------------------------------------------------|
+| **캐싱(Cache)**                         | InMemoryCache, SQLiteCache로 API 호출 최적화 | [캐시(Cache)](https://github.com/CheorHyeon/LangGraphTutorial/pull/18) |
+| **모델 직렬화(Serialization) - 저장 및 불러오기** | 모델·체인을 파일(바이너리·JSON)로 저장하고, `load`/`loads`로 다시 불러오는 방법 | [모델 직렬화](https://github.com/CheorHyeon/LangGraphTutorial/pull/19)    |
