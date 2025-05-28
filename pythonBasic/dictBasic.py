@@ -85,7 +85,7 @@ print(a.get('phone')) # 010-9999-1234
 ### a['name'] vs a.get('name')
 #### 딕셔너리에 존재하지 않는 값을 가져올 떄 차이
 print(a.get('nokey')) # None
-print(a['nokey']) # 에러 발생
+# print(a['nokey']) # 에러 발생
 
 print(a.get('nokey', 'foo')) # 없을때 None말고 기본값 지정 가능
 
@@ -93,4 +93,23 @@ print(a.get('nokey', 'foo')) # 없을때 None말고 기본값 지정 가능
 print('name' in a) # True
 print('email' in a)  # False
 
+# 내포 (dict comprehension) 형식 : 리스트를 앞에서부터 한 개씩 뽑아 변수에 담고 그 안쪽 표현식을 평가
+
+keys = ["key1", "key2", "key3"]
+
+dict_sam = {
+    key : {
+        "a1" : "a1"
+    }
+    for key in keys
+}
+print(dict_sam) # { "key1" : {"a1" : "a1"}, "key2" : { "a1", "a1" }, "key3" : { "a1", "a1" } }
+
+
+dict_sam2 = {}
+
+for key in keys:
+    dict_sam2[key] = {"a1" : "a1"}
+
+print(dict_sam2)  # { "key1" : {"a1" : "a1"}, "key2" : { "a1", "a1" }, "key3" : { "a1", "a1" } }
 
