@@ -21,6 +21,9 @@ dependencies = [
     "langchain-community (>=0.3.24,<0.4.0)",
     "huggingface-hub (>=0.32.4,<0.33.0)",
     "langchain-huggingface (>=0.2.0,<0.3.0)",
+    "qdrant-client (>=1.15.1,<2.0.0)",
+    "langchain (>=0.3.27,<0.4.0)",
+    "langchain-qdrant (>=0.2.1,<0.3.0)",
 ]
 
 
