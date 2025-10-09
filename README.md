@@ -3,9 +3,9 @@
 - LangGraph 학습에 앞서 Python의 자료구조를 복습합니다.
 - LangGraph 홈페이지의 `LangGraph 기본` 챕터를 무작정 따라가며 관련 개념을 간략히 학습합니다.
   - 기존 코드를 좀 더 보기 편하게 ChatGPT를 이용해서 리팩토링 및 주석을 각 단계별로 달아뒀습니다.
-- LangGraph와 관련된 여러 개념을 학습합니다.
-  - Output Parser 관련 학습
-  - stream 방식 관련 학습
+- LangChain, LangGraph와 관련된 여러 개념을 학습합니다.
+  - 테디노트 LangChain 위키 독스를 참고하고, ChatGPT를 활용하여 PR에 해당 개념에 대한 내용을 보충합니다.
+  - [출처 - 테디노트 LangChain 노트](https://wikidocs.net/book/14314)
  
 -------------------------
  
@@ -35,6 +35,10 @@
 - 공식 문서 `LangGraph 기본` 챕터 따라하기
 - [tutorial 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/tutorial)
 
+## 💻 Prompt 학습
+- LangChain의 Prompt 관련 기능 사용법 및 예제 정리
+- [Prompt 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/prompt)
+
 ## 🔧 Output Parser 학습
 - LLM 출력 파싱·구조화 방법 
 - [Output Parser 폴더](https://github.com/CheorHyeon/LangGraphTutorial/blob/main/outputParser/README.md)
@@ -43,6 +47,13 @@
 - 에이전트 그래프 노드별 실시간 업데이트 예제
 - [PR - Stream 방식 정리](https://github.com/CheorHyeon/LangGraphTutorial/pull/2)
 
-## 💻 Prompt 학습
-- LangChain의 Prompt 관련 기능 사용법 및 예제 정리
-- [Prompt 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/prompt)
+## 🧩 Model 학습
+- LangChain의 LLM 모델 설정 및 관리에 관한 내용을 다룹니다.
+- OpenAI 모델 호출 최적화, 캐싱(Cache), 직렬화(Serialization) 등 예제 포함.
+- [model 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/model)
+
+## 🧠 Memory 학습
+- LangChain에서 대화 기억(Memory) 을 다루는 다양한 방법 실습
+- 각 방식의 Deprecated 여부와 최신 권장 패턴(RunnableWithMessageHistory)을 비교 정리
+- Qdrant Vector DB에 저장하고, 의미 기반 유사도 검색 수행 예제도 포함
+- [memory 폴더](https://github.com/CheorHyeon/LangGraphTutorial/tree/main/memory)
